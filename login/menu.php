@@ -1,4 +1,13 @@
-</head>
+<?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header('Location: login.php');
+}
+
+$nombre = $_SESSION['nombre'];
+$tipo_usuario = $_SESSION['tipo_usuario'];
+?>
 
 <body>
 
@@ -23,6 +32,16 @@
                         <li class="nav-item">
                             <a class="navbar-brand" href="principal.php">Inicio</a>
                         </li>
+                        <?php if ($tipo_usuario == '1') { ?>
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="secundario.php">Segundo</a>
+                            </li>
+                        <?php
+                        include '../../sistema/27julio/vehiculos.php';
+                        } ?>
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="logout.php">Salir</a>
+                        </li>
                     </ul>
 
                 </div>
@@ -30,4 +49,3 @@
         </nav>
         <hr class="my-2">
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -1,15 +1,15 @@
 <?php
 require_once "conexion.php";
-
+require_once "encabezado.php";
 session_start();
 
 if (isset($_SESSION['id'])) {
     header('Location: principal.php');
- }
+}
 
 if ($_POST) {
     $usuario = $_POST['usuario'];
-    $password = $_POST['password'];
+    $password = $_POST['contraseña'];
 
 
     $sql = "SELECT `id`, `password`, `nombre`, `tipo_usuario` FROM usuarios WHERE usuario = '$usuario'";
@@ -41,16 +41,20 @@ include "encabezado.php";
 ?>
 
 
-    <title>Inicio de sesión</title>
+<title>Inicio de sesión</title>
 </head>
+
 <body>
     <div class="container">
+        <div class="container">
 
-        <form action="login.php" method="post">
-            <input type="text" name="usuario" id="">
-            <input type="password" name="contraseña" id="">
-            <button type="submit" class="btn btn-success" >Ingresar</button>
-        </form>
+            <form action="login.php" method="post">
+                <input type="text" name="usuario" id="">
+                <input type="password" name="contraseña" id="">
+                <button type="submit" class="btn btn-success">Ingresar</button>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
