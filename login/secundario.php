@@ -1,7 +1,7 @@
 <?php
-require_once "conexion.php";
-require_once "encabezado.php";
-require_once "menu.php";
+require_once "add/conexion.php";
+require_once "add/encabezado.php";
+require_once "add/menu.php";
 
 
 if (!isset($_SESSION['id'])) {

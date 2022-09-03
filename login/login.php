@@ -1,6 +1,6 @@
 <?php
-require_once "conexion.php";
-require_once "encabezado.php";
+require_once "add/conexion.php";
+require_once "add/encabezado.php";
 session_start();
 
 if (isset($_SESSION['id'])) {
