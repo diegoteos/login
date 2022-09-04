@@ -13,16 +13,14 @@ $_SESSION['start'] = time();
 */
 
 
-//session_start();
+session_start();
 if (!isset($_SESSION['tiempo'])) {
     $_SESSION['tiempo']=time();
 }
-else if (time() - $_SESSION['tiempo'] > 5) {
+else if (time() - $_SESSION['tiempo'] > 10) {
     session_destroy();
-    /* Aquí redireccionas a la url especifica */
-    //header("Location: login.php");
     ?>
-    <META HTTP-EQUIV="REFRESH" CONTENT="URL=login.php">
+    <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=login.php">
     <?php 
     die();  
 }
