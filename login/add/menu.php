@@ -1,9 +1,5 @@
 <?php
-session_start();
 
-if (!isset($_SESSION['id'])) {
-    header('Location: login.php');
-}
 
 $nombre = $_SESSION['nombre'];
 $tipo_usuario = $_SESSION['tipo_usuario'];
@@ -36,9 +32,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'];
                             <li class="nav-item">
                                 <a class="navbar-brand" href="secundario.php">Segundo</a>
                             </li>
-                        <?php
-                        include '../../sistema/27julio/vehiculos.php';
-                        } ?>
+                        <?php } ?>
                         <li class="nav-item">
                             <a class="navbar-brand" href="logout.php">Salir</a>
                         </li>

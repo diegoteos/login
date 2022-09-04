@@ -1,6 +1,5 @@
 <?php
 require_once "add/conexion.php";
-require_once "add/encabezado.php";
 session_start();
 
 if (isset($_SESSION['id'])) {
@@ -37,7 +36,7 @@ if ($_POST) {
     }
 }
 
-include "encabezado.php";
+include_once "add/encabezado.php";
 ?>
 
 
