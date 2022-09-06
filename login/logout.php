@@ -4,11 +4,13 @@ session_start();
 
 if (isset($_SESSION['id'])) {
    session_destroy();
-   //header('Location: login.php');
+   header('Location: login.php');
+   /*
    echo '<script language="javascript">
     alert("..:: SESIÓN CERRADA CORRECTAMENTE ::..");
     window.location.href = "login.php";
     </script>';
+    */
 } else {
    //echo "Hey muchachito... que haces aca? andas  escarbando...";
    echo '<script language="javascript">

@@ -37,4 +37,5 @@ if (!isset($_SESSION['id'])) {
 if (isset($_POST['nombre']) && $_POST['nombre'] != null) {
     $nombre = $_POST['nombre'];
     echo "<div class='container'>Hola nos da gusto saludarte, tu nombre es: " . $nombre . '<div>';
+    $fh = fopen("prueba.txt", 'w') or die("Se produjo un error al crear el archivo");
 }

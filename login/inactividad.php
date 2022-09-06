@@ -16,10 +16,10 @@ $_SESSION['start'] = time();
 if (!isset($_SESSION['tiempo'])) {
     $_SESSION['tiempo']=time();
 }
-else if (time() - $_SESSION['tiempo'] > 10) {
+else if (time() - $_SESSION['tiempo'] > 50) {
     session_destroy();
     ?>
-    <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=login.php">
+    <META HTTP-EQUIV="REFRESH" CONTENT="0;URL=login.php">
     <?php 
     die();  
 }
