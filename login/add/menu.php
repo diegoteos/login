@@ -1,6 +1,11 @@
 <?php
-$nombre = $_SESSION['nombre'];
-$tipo_usuario = $_SESSION['tipo_usuario'];
+
+if (!isset($_SESSION['id'])) {
+    header('Location: login.php');
+} else {
+    $nombre = $_SESSION['nombre'];
+    $tipo_usuario = $_SESSION['tipo_usuario'];
+}
 ?>
 
 <body>
