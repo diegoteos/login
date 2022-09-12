@@ -33,6 +33,9 @@ if ($_POST) {
         }
     } else {
         echo "No existe el usuario";
+        $error = 1;
+        include_once ('error.php');
+        
     }
 }
 
