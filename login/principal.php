@@ -6,7 +6,7 @@ if (!isset($_SESSION['id'])) {
     header('Location: login.php');
 } else {
     require_once "add/menu.php";
-    require_once "inactividad.php";
+    require_once "add/inactividad.php";
 }
 
 ?>
