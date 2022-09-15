@@ -6,7 +6,7 @@ if (isset($_SESSION['id'])) {
     header('Location: principal.php');
 }
 
-if ($_POST) {
+if (isset($_POST['usuario']) && isset($_SESSION['contraseña'])) {
     $usuario = $_POST['usuario'];
     $password = $_POST['contraseña'];
 
