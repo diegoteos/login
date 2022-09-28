@@ -3,6 +3,8 @@ session_start();
 
 if (isset($_SESSION['id'])) {
     header('Location: principal.php');
+}else {
+    echo "Ingrese sus datos para iniciar sesion";
 }
 
 
