@@ -7,7 +7,6 @@ if (isset($_SESSION['id'])) {
     echo "Ingrese sus datos para iniciar sesion";
 }
 
-
 // validamos que vengan los dos parametros el del usuario y la contraseña
 if (isset($_POST['usuario']) && isset($_POST['contraseña'])) {
     $usuario = $_POST['usuario'];
